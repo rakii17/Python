@@ -4,10 +4,10 @@ You may assume that each input would have exactly one solution, and you may not 
 Question Link: https://leetcode.com/problem-list/w0f2z5yj/ '''
 
 #Solution1:
-for i,v in enumerate(nums):
-            for j in range(i + 1, len(nums)):
-                if v + nums[j] == target:
-                    return [i,j]
+for i in range(len(nums)):
+    for j in range(i+1, len(nums)):
+        if nums[i] + nums[j] == target:
+            return [i,j]
 
 #Solution2:
 seen = {}
